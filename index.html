@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/resume.css" type="text/css">
 <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>LOGARAM-RESUME</title>
   <style>
     *{
@@ -24,19 +25,22 @@ body{
     font-family:'Roboto', sans-serif; 
     height: 100%;
     width: 100%;
-  background-color:black;
+    
 }
 header{
     height: 100%;
     width: 100%;
     background-color: black;
+    
 }
 .head{
   margin: 220px;
+margin-bottom: 150px;
 }
 .head h1,h2{
     color: rgb(245, 243, 241);
     font-family: 'Odibee Sans', cursive;
+    font-size: 75px;
 }
 .head h1:hover{
     color:rgb(179, 19, 19);
@@ -51,11 +55,11 @@ header{
     padding: 5px;
     
     color: black;
-    margin: 4px;
+  
 }
 .head span:hover{
     
-    background-color: rgb(236,116,17);
+    background-color: rgb(179,19,19);
     border-radius: 15px;
     padding: 5px;
    
@@ -87,22 +91,22 @@ footer{
     background-color: rgb(249, 253, 249);
 }
 .About{
-  margin: 220px;
-
+  margin-bottom: 20px;
+margin-top: 20px;
+background-color: white;
  
 }
 #about{
-  color: white;
+  color: black;
+
 }
-#about:hover{
-  color: white;
-  border-bottom: 3px solid red;
-  
-}
+
 #img{
   height: 200px;
   width: 200px;
  border-radius: 200px;
+ margin-top: 0px;
+ margin-bottom: 50px;
 }
 .font2{
   font-weight: 10px;
@@ -110,16 +114,106 @@ footer{
 }
 .font1{
   color: goldenrod;
+  font-size: 50px;
 }
-#font,.font0{
+#font,.font0,#f{
  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: grey;
+}
+#btn{
+  padding: 25px;
+  font-size: 25px;
+}
+.info{
+  background-color: black;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.skills{
+  
+  height: 700px;
+  width: 100%;
+}
+#skill{
+  color: goldenrod;
+}
+.sk{
+  margin-left: 100px;
+  margin-right: 100px;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 30px;
+  
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+.checked{
+  color:orange;
+}
+.sk{
+  margin-top: 100px;
+  border: 1px solid black;
+  width: 700px;
+}
+.data{
+  width:400px;
+ 
+}
+.font3{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: grey;
+  font-size: 25px;
+}
+#img1{
+  height: 300px;
+  width: 400px;
+
+  float: right;
+  margin-right: 20px;
 }
   </style>
 </head>
 <body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+  </svg></i></button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">RESUME</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -134,7 +228,7 @@ footer{
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Skills</a>
+              <a class="nav-link" href="#skill">Skills</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
@@ -150,16 +244,19 @@ footer{
    <div class="head">
     <h1 class="text-center">Logaram</h1>
     <h2 class="text-center">I'm a passionate web-designer</h2>
-    <a href="#about"><span class="badge badge-pill-center badge-warning font-weight-bold">Check out my profile<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+    <a href="#about"><span class="badge badge-pill-center badge-warning font-weight-bold" id="btn">Check out my profile<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
     </svg></span>
    </a>
   </div>
 </center>
+<br>
+
 </header>
-<hr>
-  <center>
+
+
 <div class="About">
+  <br>
   <h1 class="text-center" id="about">ABOUT</h1>
   <p class="text-center" id="font">I am an allroud web designer. i am programmer <br>with good knowledge in front-end techniques. I love structure<br> 
     and order and I also stand for quality.I love<br> spending time on fixing little details and <br>creating web pages.
@@ -167,6 +264,8 @@ footer{
      <div class="text-center">
       <img src="/assets/IMG_20210129_203018_096.jpg" class="img-fluid" id="img" alt="Responsive image">
     </div>
+  </div>
+    <div class="info">
     <div class="details"><h2 class="font1">Personal Details</h2>
     <h3 class="font2">Name:</h3>
     <p class="font0">Logaram</p>
@@ -213,7 +312,168 @@ footer{
   <p class="font0">4.Student Council Member(2020-2021)</p>
 </div>
 </div>
-    </center>
+<hr>
+<div class="skills">
+  <br>
+  <h1 class="text-center" id="skill">SKILLS</h1>
+  <p class="text-center" id="f">I really believe that everyone has a talent,<br> ability, or skill that he can mine to supportbr
+     himself and to succeed in life.</p>
+<img class="rounded float-right" id="img1" src="https://www.jing.fm/clipimg/full/93-936954_skill-up-or-get-left-behind-developing-basic.png">
+  <div class="sk">
+   
+ <ul class="font3" type="none">
+   <table>
+     <tr>
+       <td>
+   <li>HTML
+   </td>
+   <td class="data">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    </td>
+   </li>
+   </tr>
+   <tr>
+     <td>
+   <li>CSS
+   </td>
+<td class="data">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+</td>
+   </li>
+   </tr>
+   <tr>
+     <td>
+   <li>bootstrap
+   </td>
+   <td class="data">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    </td>
+   </li>
+   </tr>
+   <tr>
+     <td>
+   <li>Javascript
+   </td>
+   <td class="data">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+    </td>
+   </li>
+   </tr>
+   <tr>
+     <td>
+   <li>C
+   </td>
+   <td class="data">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+    </td>
+   </li>
+   </tr>
+   <tr>
+     <td>
+   <li>JAVA
+   </td>
+   <td class="data">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+    </td>
+   </li>
+  </tr>
+  <tr>
+    <td>
+   <li>SQL
+     </td>
+     <td class="data">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+    </td>
+   </li>
+   </tr>
+   <tr>
+     <td>
+   <li>AutoCad
+   </td>
+   <td class="data">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    </td>
+   </li>
+   </tr>
+   <tr>
+     <td>
+   <li>SolidWorks
+   </td>
+   <td class="data">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    </td>
+   </li>
+   </tr>
+   <tr>
+     <td>
+   <li>OrCad
+   </td>
+   <td class="data">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+    </td>
+   </li>
+   </tr>
+   <tr>
+     <td class="data">
+   <li>Photoshop
+     </td>
+     <td>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    </td>
+   </li>
+</tr>
+   </table>
+
+
+  </ul>
+ 
+</div>
+</div>
+</div>
  <footer>
    <center>
      <div class="cp">
