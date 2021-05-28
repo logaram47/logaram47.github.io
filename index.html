@@ -10,7 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/index.css" type="text/css">
+<link rel="stylesheet" href="/resume.css" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
   <title>LOGARAM-RESUME</title>
   <style>
     *{
@@ -19,7 +20,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: black;
+    
     font-family:'Roboto', sans-serif; 
     height: 100%;
     width: 100%;
@@ -27,45 +28,42 @@ body{
 header{
     height: 100%;
     width: 100%;
+    background-color: black;
 }
-
-
+.head{
+  margin: 220px;
+}
 .head h1,h2{
     color: rgb(245, 243, 241);
     font-family: 'Odibee Sans', cursive;
-    
-}
-.head span{
-    
-    background-color: gold;
-    border-radius: 15px;
-    padding: 5px;
-    font-weight: bold;
-    color: black;
-  margin:6px;
-    
-    
-}
-.head a{
-    text-decoration: none;
-}
-.head span:hover{
-    
-    background-color: rgb(236,116,17);
-    border-radius: 15px;
-    padding: 5px;
-    font-weight: bold;
-    color: honeydew;
-    
-}
-.head{
-    margin: 170px;
 }
 .head h1:hover{
     color:rgb(179, 19, 19);
 }
 .head h2:hover{
     color:rgb(179,19,19);
+}
+.head span{
+    
+    background-color: gold;
+    border-radius: 15px;
+    padding: 5px;
+    
+    color: black;
+    margin: 4px;
+}
+.head span:hover{
+    
+    background-color: rgb(236,116,17);
+    border-radius: 15px;
+    padding: 5px;
+   
+    color: honeydew;
+    
+}
+.head a{
+    text-decoration: none;
+    
 }
 .navbar-nav .nav-item .nav-link{
     color: rgb(27, 26, 26);
@@ -87,6 +85,35 @@ header{
 footer{
     background-color: rgb(249, 253, 249);
 }
+.About{
+  margin: 220px;
+
+ 
+}
+#about{
+  color: white;
+}
+#about:hover{
+  color: white;
+  border-bottom: 3px solid red;
+  
+}
+#img{
+  height: 200px;
+  width: 200px;
+ border-radius: 200px;
+}
+.font2{
+  font-weight: 10px;
+  color: aliceblue;
+}
+.font1{
+  color: goldenrod;
+}
+#font,.font0{
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: grey;
+}
   </style>
 </head>
 <body>
@@ -103,7 +130,7 @@ footer{
               <a class="nav-link" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Skills</a>
@@ -118,15 +145,72 @@ footer{
         </div>
       </div>
     </nav>
-  </header>
-    <div class="head">
-     <h1 class="text-center">Logaram</h1>
+   <center>
+   <div class="head">
+    <h1 class="text-center">Logaram</h1>
     <h2 class="text-center">I'm a passionate web-designer</h2>
-    <a href="#"><span class="badge badge-pill- badge-warning text-center">Check out my profile<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+    <a href="#about"><span class="badge badge-pill-center badge-warning font-weight-bold">Check out my profile<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
     </svg></span>
    </a>
+  </div>
+</center>
+</header>
+<hr>
+<div class="About">
+  <h1 class="text-center" id="about">ABOUT</h1>
+  <p class="text-center" id="font">I am an allroud web designer. i am programmer <br>with good knowledge in front-end techniques. I love structure<br> 
+    and order and I also stand for quality.I love<br> spending time on fixing little details and <br>creating web pages.
+     Also i like working in a team,you'll learn <br>faster and much more.As the <br>saying goes:'two heads are better than one'. </p>
+     <div class="text-center">
+      <img src="/assets/IMG_20210129_203018_096.jpg" class="img-fluid" id="img" alt="Responsive image">
     </div>
+    <div class="details"><h2 class="font1">Personal Details</h2>
+    <h3 class="font2">Name:</h3>
+    <p class="font0">Logaram</p>
+    <h3 class="font2">Age:</h3>
+    <p class="font0">21 years</p>
+    <h3 class="font2">Location:</h3>
+    <p class="font0">1/12,Harur Main Road,Kuppanur-Salem</p>
+    <h3 class="font2">Languages Known:</h3>
+    <p class="font0">1.English</p>
+    <p class="font0">2.Tamil</p>
+    </div>
+     <h2 class="font1">Qualification details</h2>
+ <h3 class="font2">School</h3><span class="font0">10th-Holy Cross Mat Hr Sec School-Salem 
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 94.4%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">94.4%</div>
+  </div>
+ </span>
+ <span class="font0">12th-Holy Cross Mat Hr Sec School-Salem
+  <div class="progress">
+    <div class="progress-bar bg-warning" role="progressbar" style="width: 80.08%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80.08%</div>
+  </div>
+ </span>
+ <h3 class="font2">College</h3><span class="font0">Kongu Engineering College-Erode
+  <div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
+  </div>
+ </span>
+ <br>
+<div><h2 class="font1">Area of intrest</h2>
+<p class="font0">Web-Designing(Front-end)</p>
+<p class="font0">Cad-Modelling</p>
+</div>
+<div><h2 class="font1">Industrial Exposure</h2>
+<p class="font0">1.Solid Works at NSIC(7-days)</p>
+<p class="font0">2.HRM & CRM at SAIL(7-days)</p>
+<p class="font0">3.Web-Designing at Apponix(7-days)</p>
+<p class="font0">4.Web-Designing at Internship Studio(30-days)</p>
+
+</div>
+<div><h2 class="font1">Leadership Skills</h2>
+  <p class="font0">1.Joint secretary of Robotics Club(2020-2021)</p>
+  <p class="font0">2.Executive Member of Self Developement Club(2020-2021)</p>
+  <p class="font0">3.Class Representative(2019-2020)</p>
+  <p class="font0">4.Student Council Member(2020-2021)</p>
+</div>
+</div>
  <footer>
    <center>
      <div class="cp">
@@ -154,5 +238,6 @@ footer{
   </div>
    </center>
  </footer>
+ 
 </body>
 </html>
